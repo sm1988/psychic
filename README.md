@@ -1,1 +1,1 @@
-# psychic
+# psychic game to guess the word
