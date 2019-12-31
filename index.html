@@ -5,6 +5,9 @@
             Psychic Games
         </title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <script src="assets/javascript/game.js"></script>
+
     </head>
 
     <body class="container" style="max-width: 780px;">
@@ -17,7 +20,12 @@
         <button type="button" class="btn btn-warning">You have $guess Left</button>
         <button type="button" class="btn btn-info">Reset</button>
         <br><br>
-        <div><h3>Your current guess is :</h3></div>
-
+        <div>
+                <form NAME="WordForm">
+                    <p>Make a Guess!   </p>
+                    <input TYPE=text NAME="WordBox" ><br><br>
+                    <input TYPE=button VALUE="Generate" onClick="PickRandomWord(document.WordForm);" id="button">
+                </form>
+        </div>
     </body>
 </html>
