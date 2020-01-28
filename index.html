@@ -1,31 +1,45 @@
-
 <html>
-    <head>
-        <title>
-            Psychic Games
-        </title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel="stylesheet" href="assets/css/style.css">
-        <script src="assets/javascript/game.js"></script>
 
-    </head>
+<head>
+    <title>
+        Psychic Games
+    </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/javascript/game.js"></script>
 
-    <body class="container" style="max-width: 780px;">
-        <div class="jumbotron">
-            <img src="assets/images/banner.png" style="width: 680px; height: 250px;">
+</head>
+
+<body class="container" style="max-width: 780px;">
+    <div class="jumbotron">
+        <img src="assets/images/banner.png" style="width: 680px; height: 250px;">
+    </div>
+    <div class="row">
+          <div class="col">
+            <form NAME="WordForm">
+                <button type="button" class="btn btn-primary" id="Play">Play The Game!</button>
+                <button type="button" class="btn btn-info" id="reset">Reset</button>
+                <br><br>
+                <input TYPE=button VALUE="Give me a word" onClick="PickRandomWord(document.WordForm);"
+                    id="button"><br><br>
+                <input TYPE=text NAME="WordBox"><br><br>
+                <input TYPE=button VALUE="Check My Answer" onClick="userGuess(document.WordForm);" id="button">
+            </form>
         </div>
-        <button type="button" class="btn btn-primary">Play The Game!</button>
-        <button type="button" class="btn btn-success">Your Wins : $win!</button>
-        <button type="button" class="btn btn-danger">Your Losses: $loss!</button>
-        <button type="button" class="btn btn-warning">You have $guess Left</button>
-        <button type="button" class="btn btn-info">Reset</button>
-        <br><br>
-        <div>
-                <form NAME="WordForm">
-                    <p>Make a Guess!   </p>
-                    <input TYPE=text NAME="WordBox" ><br><br>
-                    <input TYPE=button VALUE="Generate" onClick="PickRandomWord(document.WordForm);" id="button">
-                </form>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <div class="card-header">
+                    Scoreboard
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item" id="winScore">Your Wins : 0</li>
+                    <li class="list-group-item" id="lossScore">Your Losses : 0</li>
+                    <li class="list-group-item" id="myChances">You have 10 chances left</li>
+                </ul>
+            </div>
         </div>
-    </body>
+    </div>
+</body>
+
 </html>
