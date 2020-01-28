@@ -46,7 +46,6 @@ function BuildArray(size) {
 };
 // Generate a random number between 1 and NumberOfWords
 var rnd = Math.ceil(Math.random() * NumberOfWords);
-
 var str = words[rnd];
 
 function PickRandomWord(frm) {
@@ -55,15 +54,15 @@ function PickRandomWord(frm) {
     var strLen = newStr.length / 2 - 1;
     for (var i = 0; i <= strLen; i++) {
         newStr = removeRandomLetter(newStr);
-    }
+    };
     // Display the new string inside the text box
     frm.WordBox.value = newStr;
     function removeRandomLetter(newStr) {
         var pos = Math.floor(Math.random() * strLen);
         var x = newStr[pos];
         return newStr = newStr.replace(x, "-");
-    }
-}
+    };
+};
 
 function userGuess(frm) {
     // Capture the user input 
@@ -85,4 +84,6 @@ function userGuess(frm) {
         document.getElementById("myChances").innerHTML = " You have " + chances + "  left";
     };
 
-};
+}
+
+reset();
